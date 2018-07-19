@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！ 清空和截短数组12345678910const arr = [11, 22, 33, 44, 55, 66];// 截取arr.length = 3;console.log(arr); //=&amp;gt;">
+<meta name="description" content="编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！  清空和截短数组12345678910const arr = [11, 22, 33, 44, 55, 66];// 截取arr.length = 3;console.log(arr); //=&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[转]5分钟学习js一些小技巧">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/转-5分钟学习js一些小技巧/index.html">
 <meta property="og:site_name" content="avocadaowang">
-<meta property="og:description" content="编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！ 清空和截短数组12345678910const arr = [11, 22, 33, 44, 55, 66];// 截取arr.length = 3;console.log(arr); //=&amp;gt;">
-<meta property="og:updated_time" content="2018-07-19T07:07:56.800Z">
+<meta property="og:description" content="编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！  清空和截短数组12345678910const arr = [11, 22, 33, 44, 55, 66];// 截取arr.length = 3;console.log(arr); //=&amp;gt;">
+<meta property="og:updated_time" content="2018-07-19T07:43:37.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[转]5分钟学习js一些小技巧">
-<meta name="twitter:description" content="编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！ 清空和截短数组12345678910const arr = [11, 22, 33, 44, 55, 66];// 截取arr.length = 3;console.log(arr); //=&amp;gt;">
+<meta name="twitter:description" content="编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！  清空和截短数组12345678910const arr = [11, 22, 33, 44, 55, 66];// 截取arr.length = 3;console.log(arr); //=&amp;gt;">
 
 
 
@@ -300,8 +300,8 @@
       
         <blockquote>
 <p>编者按：本文转载自 zhCN_超 的掘金专栏，原文链接 - Learn these neat JavaScript tricks in less than 5 minutes , 来一起学习吧！</p>
-<h5 id="清空和截短数组"><a href="#清空和截短数组" class="headerlink" title="清空和截短数组"></a>清空和截短数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const arr = [11, 22, 33, 44, 55, 66];</div><div class="line"></div><div class="line">// 截取</div><div class="line">arr.length = 3;</div><div class="line">console.log(arr); //=&gt; [11, 22, 33];</div><div class="line"></div><div class="line">// 清空</div><div class="line">arr.length = 0;</div><div class="line">console.log(arr); //=&gt; []</div><div class="line">console.log(arr[2]); //=&gt; undefined</div></pre></td></tr></table></figure>
 </blockquote>
+<h5 id="清空和截短数组"><a href="#清空和截短数组" class="headerlink" title="清空和截短数组"></a>清空和截短数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const arr = [11, 22, 33, 44, 55, 66];</div><div class="line"></div><div class="line">// 截取</div><div class="line">arr.length = 3;</div><div class="line">console.log(arr); //=&gt; [11, 22, 33];</div><div class="line"></div><div class="line">// 清空</div><div class="line">arr.length = 0;</div><div class="line">console.log(arr); //=&gt; []</div><div class="line">console.log(arr[2]); //=&gt; undefined</div></pre></td></tr></table></figure>
 <h5 id="使用对象结构模拟命名参数"><a href="#使用对象结构模拟命名参数" class="headerlink" title="使用对象结构模拟命名参数"></a>使用对象结构模拟命名参数</h5><p>以前，当我们希望向一个函数传递多个参数时，可能会采用配置对象的模式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">doSomething(&#123; foo: &apos;Hello&apos;, bar: &apos;Hey!&apos;, baz: 42 &#125;);</div><div class="line"></div><div class="line">function doSomething(config) &#123;</div><div class="line">  const foo = config.foo !== undefined ? config.foo : &apos;Hi&apos;;</div><div class="line">  const bar = config.bar !== undefined ? config.bar : &apos;Yo!&apos;;</div><div class="line">  const baz = config.baz !== undefined ? config.baz : 13;</div><div class="line"></div><div class="line">  // ...</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这是一个古老但是有效的模式，有了 ES2015 的对象结构，你可以这样使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function doSomething(&#123; foo = &apos;Hi&apos;, bar = &apos;Yo!&apos;, baz = 13 &#125;) &#123; </div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果你需要这个配置对象参数变成可选的，也很简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function doSomething(&#123; foo = &apos;Hi&apos;, bar = &apos;Yo!&apos;, baz = 13 &#125; = &#123;&#125;) &#123;</div><div class="line">    // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
